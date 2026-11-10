@@ -108,6 +108,14 @@ MIT -- see [LICENSE](LICENSE).
 
 ---
 
+## Repository structure
+
+Key files and folders (not exhaustive):
+
+- `LICENSE`
+- `README.md`
+
+
 ## Maintenance & Audit
 
 - **Audit date:** 10 November 2026
