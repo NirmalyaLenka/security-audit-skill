@@ -25,26 +25,26 @@ Multiple runs against the same repo are additive. The skill uses prior ledgers a
 
 | File | Purpose |
 |------|---------|
-| `SKILL.md` | Setup, core principles, platform terminology, workflow overview, and audit anti-patterns |
-| `RECONNAISSANCE.md` | Phase 1 reconnaissance prompts and synthesis instructions |
-| `HUNTING.md` | Phase 2 orchestration, hunting methodology, and validation rules |
-| `ATTACK-CLASSES.md` | Core, wildcard, and obvious-things attack prompts |
-| `MEMORY-SAFETY-AND-BINARY.md` | Memory-safety, binary, and kernel hunting classes for native targets |
-| `AI-AND-LLM.md` | Prompt-injection, agent/tool, and output-handling hunting classes for LLM-backed targets |
-| `WEB-PROTOCOL-AND-AUTH.md` | HTTP request-framing, cache, and authentication-protocol hunting classes for HTTP-protocol and auth targets |
-| `CLIENT-SIDE.md` | DOM-injection, messaging-trust, UI-redress, and prototype-pollution hunting classes for client-side/browser targets |
-| `SUPPLY-CHAIN-AND-RELEASE.md` | Dependency, CI, release, signing, update, plugin, and extension hunting classes |
-| `CLOUD-AND-DEPLOYMENT.md` | IAM, infrastructure-as-code, container, serverless, ingress, and runtime-configuration hunting classes |
-| `PROTOCOLS-RPC-AND-MESSAGING.md` | RPC, serialization, queue, broker, webhook, and streaming-protocol hunting classes |
-| `RESOURCE-EXHAUSTION-AND-AVAILABILITY.md` | Shared resource, quota, queue, worker, and operator-spend hunting classes |
-| `DATA-ISOLATION-AND-LIFECYCLE.md` | Tenant isolation, cache, search, export, backup, migration, deletion, and restore hunting classes |
-| `DESKTOP-MOBILE-AND-LOCAL-IPC.md` | Native app, deep-link, webview, exported-component, helper, daemon, and local-IPC hunting classes |
-| `VALIDATION-AND-REPORTING.md` | Phases 3–6 candidate validation, structured output, record verification, and reporting |
-| `report-schema.json` | JSON schema for all three `findings.json` verdicts |
-| `validate-findings.cjs` | Zero-dependency validator for `findings.json` in Phases 4 and 5 |
-| `validate-findings.test.cjs` | Findings-validator tests and producer-compatible fixture checks |
-| `validate-coverage-ledger.cjs` | Zero-dependency validator for `coverage-ledger.json` in Phases 1–5 |
-| `validate-coverage-ledger.test.cjs` | Coverage-ledger validator tests |
+| `skills/security-audit/SKILL.md` | Setup, core principles, platform terminology, workflow overview, and audit anti-patterns |
+| `skills/security-audit/RECONNAISSANCE.md` | Phase 1 reconnaissance prompts and synthesis instructions |
+| `skills/security-audit/HUNTING.md` | Phase 2 orchestration, hunting methodology, and validation rules |
+| `skills/security-audit/ATTACK-CLASSES.md` | Core, wildcard, and obvious-things attack prompts |
+| `skills/security-audit/MEMORY-SAFETY-AND-BINARY.md` | Memory-safety, binary, and kernel hunting classes for native targets |
+| `skills/security-audit/AI-AND-LLM.md` | Prompt-injection, agent/tool, and output-handling hunting classes for LLM-backed targets |
+| `skills/security-audit/WEB-PROTOCOL-AND-AUTH.md` | HTTP request-framing, cache, and authentication-protocol hunting classes for HTTP-protocol and auth targets |
+| `skills/security-audit/CLIENT-SIDE.md` | DOM-injection, messaging-trust, UI-redress, and prototype-pollution hunting classes for client-side/browser targets |
+| `skills/security-audit/SUPPLY-CHAIN-AND-RELEASE.md` | Dependency, CI, release, signing, update, plugin, and extension hunting classes |
+| `skills/security-audit/CLOUD-AND-DEPLOYMENT.md` | IAM, infrastructure-as-code, container, serverless, ingress, and runtime-configuration hunting classes |
+| `skills/security-audit/PROTOCOLS-RPC-AND-MESSAGING.md` | RPC, serialization, queue, broker, webhook, and streaming-protocol hunting classes |
+| `skills/security-audit/RESOURCE-EXHAUSTION-AND-AVAILABILITY.md` | Shared resource, quota, queue, worker, and operator-spend hunting classes |
+| `skills/security-audit/DATA-ISOLATION-AND-LIFECYCLE.md` | Tenant isolation, cache, search, export, backup, migration, deletion, and restore hunting classes |
+| `skills/security-audit/DESKTOP-MOBILE-AND-LOCAL-IPC.md` | Native app, deep-link, webview, exported-component, helper, daemon, and local-IPC hunting classes |
+| `skills/security-audit/VALIDATION-AND-REPORTING.md` | Phases 3–6 candidate validation, structured output, record verification, and reporting |
+| `skills/security-audit/report-schema.json` | JSON schema for all three `findings.json` verdicts |
+| `skills/security-audit/validate-findings.cjs` | Zero-dependency validator for `findings.json` in Phases 4 and 5 |
+| `skills/security-audit/validate-findings.test.cjs` | Findings-validator tests and producer-compatible fixture checks |
+| `skills/security-audit/validate-coverage-ledger.cjs` | Zero-dependency validator for `coverage-ledger.json` in Phases 1–5 |
+| `skills/security-audit/validate-coverage-ledger.test.cjs` | Coverage-ledger validator tests |
 
 ## Installation
 
@@ -110,10 +110,35 @@ MIT -- see [LICENSE](LICENSE).
 
 ## Repository structure
 
-Key files and folders (not exhaustive):
+```text
+.
+├── LICENSE
+├── README.md
+└── skills/
+    └── security-audit/
+        ├── SKILL.md
+        ├── RECONNAISSANCE.md
+        ├── HUNTING.md
+        ├── ATTACK-CLASSES.md
+        ├── MEMORY-SAFETY-AND-BINARY.md
+        ├── AI-AND-LLM.md
+        ├── WEB-PROTOCOL-AND-AUTH.md
+        ├── CLIENT-SIDE.md
+        ├── SUPPLY-CHAIN-AND-RELEASE.md
+        ├── CLOUD-AND-DEPLOYMENT.md
+        ├── PROTOCOLS-RPC-AND-MESSAGING.md
+        ├── RESOURCE-EXHAUSTION-AND-AVAILABILITY.md
+        ├── DATA-ISOLATION-AND-LIFECYCLE.md
+        ├── DESKTOP-MOBILE-AND-LOCAL-IPC.md
+        ├── VALIDATION-AND-REPORTING.md
+        ├── report-schema.json
+        ├── validate-findings.cjs
+        ├── validate-findings.test.cjs
+        ├── validate-coverage-ledger.cjs
+        └── validate-coverage-ledger.test.cjs
+```
 
-- `LICENSE`
-- `README.md`
+The root README and license are separate from the installable skill directory. The workflow instructions and zero-dependency validators live under `skills/security-audit/`.
 
 
 ## Maintenance & Audit
