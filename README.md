@@ -97,10 +97,6 @@ The skill activates automatically when the request matches its trigger (security
 - **Defense-in-depth gaps are not vulnerabilities.** If Layer A prevents the attack, the absence of Layer B is a hardening note.
 - **Multiple runs improve coverage.** In our test runs, a single run found roughly half of the vulnerabilities that repeated runs found in total.
 
-## Contact
-
-Questions, feedback, or comparing notes on AI-driven security tooling: security-ai-research@cloudflare.com
-
 ## License
 
 MIT -- see [LICENSE](LICENSE).
@@ -148,3 +144,12 @@ The root README and license are separate from the installable skill directory. T
 - **Scope and evidence:** This is a documentation-level maintenance pass. It does not establish that source code compiles, dependencies are current, security has been tested, or runtime behavior has been verified.
 - **Code and tests:** No new functional code changes or test results are claimed by this README update. Run project-specific build, test, and security checks before relying on the project.
 - **Maintenance baseline:** Documentation status recorded through 24 November 2026; revisit setup instructions, dependencies, security, known limitations, and tests when the project changes.
+
+## Contact
+
+
+Questions, feedback, or comparing notes on AI-driven security tooling: security-ai-research@cloudflare.com
+
+Maintained up to 25 November 2026.
+
+If you encounter any problems, please contact [carmodbhai@gmail.com](mailto:carmodbhai@gmail.com).
